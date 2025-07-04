@@ -5,13 +5,40 @@
         <link rel="stylesheet" type="text/css">
         <script src="jquery.js"></script>
         <script>
+            //adiciona valor 
+            function adicionar (valor){
+                document.getElementById('visor').value += valor;
+            }
+            function limpar(){
+                document.getElementById('visor').value = "";
+            }
+            function calcular(){
+                var visor = document.getElementById('visor');
 
+                try{
+                    visor.value = eval(visor.value)
+                }catch(error){
+                    visor.value = "error"
+                }
+            }
         </script>
         <style>
             .botao{
                 width:3%;
                 height:1.5%;
-                beckground-color: red;
+                background-color: rgb(159, 157, 145);}
+                .botaoo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(135, 133, 124);}
+                .botaooo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(255, 86, 86);}
+                .botaoooo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(118, 239, 116);}
         </style>
     </head>
     <body>
